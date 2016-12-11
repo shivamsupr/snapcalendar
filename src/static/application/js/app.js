@@ -172,10 +172,13 @@ SnapC.prototype._initShowCalendar = function ($scope_elem) {
     $('.shwClndr', $scope_elem).on('click', function() {
         var $self = $(this);
         var $shwClndrIcn = $('.shwClndrIcn', $self);
+        var $clEvnts = $('.clEvnts', $scope_elem);
 
         if($shwClndrIcn.hasClass('open')) {
+            $clEvnts.css('height', '450px');
             $shwClndrIcn.removeClass('open').html('▼');
         } else {
+            $clEvnts.css('height', '180px');
             $shwClndrIcn.addClass('open').html('▲');
         }
 
