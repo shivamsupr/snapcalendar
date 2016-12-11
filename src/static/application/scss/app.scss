@@ -103,13 +103,14 @@ body {
           padding: 10px 13.5px;
           border: 1px solid $iron;
           border-left: 0;
+          border-bottom-width: 2px;
 
           &:last-child {
             border-right: 0;
           }
 
           &.selected {
-            border-bottom: 2px solid $brand-color;
+            border-bottom-color: $brand-color;
             color: $brand-color;
           }
         }
@@ -208,6 +209,7 @@ body {
         background-color: $smoke;
         position: fixed;
         width: inherit;
+        margin-top: 1px;
 
         &--ttl {
           font-size: $app-text-m-size;
