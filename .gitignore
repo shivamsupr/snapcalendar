@@ -1,1 +1,3 @@
-src/static/application/.sass-cache
+src/static/application/.sass-cache/
+.idea/
+.DS_Store
