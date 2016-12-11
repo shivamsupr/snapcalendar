@@ -164,7 +164,7 @@ SnapC.prototype._handleNavScroll = function ($scope_elem) {
         if(left < 800) {
             left = left - 120;
         }
-        $('.mnthLst').scrollLeft(left);
+        $('.mnthLst').parent().scrollLeft(left);
     }
 };
 

@@ -95,7 +95,7 @@ body {
       }
 
       &__lst {
-        padding: 0 38px;
+        margin: 0 45px;
 
 
         &--itm {
@@ -247,11 +247,14 @@ body {
         }
 
         &__lst {
-          width: 76%;
-          white-space: nowrap;
-          overflow: hidden;
-          overflow-x: auto;
-          display: inline-block;
+          &C {
+            width: 100%;
+            overflow: hidden;
+            overflow-x: auto;
+          }
+
+            white-space: nowrap;
+            display: inline-block;
         }
       }
 
@@ -294,7 +297,7 @@ body {
       &--cntrls {
         &__lst {
           &--itm {
-            padding: 10px 12.5px;
+            padding: 10px 12.15px;
           }
         }
       }
