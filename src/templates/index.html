@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=9">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="../static/application/css/app.css"/>
+</head>
+
+<body>
+<div class="pg-snap">
+    <div class="blk bg--g">
+        <div class="pg-cnt">
+            <div id="clndrCnt" class="cl-evnts bg--w">
+                <div class="cl-evnts--cntrls">
+                    <div class="cl-evnts--cntrls__btn cl-evnts--cntrls__prv cntrlPrv">◀</div>
+                    <ul class="hlst cl-evnts--cntrls__lst mnthLst"></ul>
+                    <div class="cl-evnts--cntrls__btn cl-evnts--cntrls__nxt cntrlNxt">▶</div>
+                </div>
+
+                <div id="dClndr">
+                    <script type="text/template" class="clndrTemplate">
+                        <div class="hlst">
+                            <div class="hlst--itm cl-evnts--clndr clndr-grid show-for-medium-up clndrBx">
+                                <div class="hlst cl-evnts--clndr__dtw days-of-the-week">
+                                    <% _.each(daysOfTheWeek, function(day) { %>
+                                    <div class="hlst--itm cl-evnts--clndr__dtw--d header-day"><%= day %></div>
+                                    <% }); %>
+                                </div>
+                                <div class="hlst cl-evnts--clndr__dys days">
+                                    <% _.each(days, function(day) { %>
+                                    <div class="hlst--itm cl-evnts--clndr__dys--d <%= day.classes %>" id="<%= day.id %>"><div class="dn day-number"><%= day.day %></div></div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                            <div class="hlst--itm cl-evnts--clndr-m show-for-small-only shwClndr text--center">
+                                <div class="cl-evnts--clndr-m__innr">
+                                    Calendar <span class="text--xs shwClndrIcn">▼</span>
+                                </div>
+                            </div>
+
+                            <div class="hlst--itm cl-evnts--evnts">
+                                <div class="hlst cl-evnts--evnts__srch">
+                                    <div class="cl-evnts--evnts__srch--ttl">Search Events:</div>
+                                    <div class="hlst--itm">
+                                        <select name="evntSlct" class="cl-evnts--evnts__srch--slct evntSlct">
+                                            <option value="">-- Select --</option>
+                                            <option value="Policy Meeting">Policy Meeting</option>
+                                            <option value="Reports">Reports</option>
+                                            <option value="Newsletter">Newsletter</option>
+                                            <option value="Post">Post</option>
+                                            <option value="AMFI Monthly">AMFI Monthly</option>
+                                            <option value="Macro">Macro</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="hlst--itm cl-evnts--evnts__srch--or">
+                                        OR
+                                    </div>
+
+                                    <div class="hlst--itm">
+                                        <input type="text" class="cl-evnts--evnts__srch--inpt evntInpt" placeholder="Search Events" />
+                                    </div>
+                                </div>
+                                <div class="cl-evnts--evnts__cnt evntLstng">
+                                    <div class="cl-evnts--evnts__cnt--ttl evntLstngTtl">This month</div>
+                                    <% _.each(eventsThisMonth, function(event) { %>
+                                    <div class="cl-evnts--evnts__cnt--itm evntItm">
+                                        <div class="cl-evnts--evnts__cnt--nm evntItmNm"><%= event.title %> on <%= moment(event.date).format('MMMM Do') %></div>
+                                        <div class="cl-evnts--evnts__cnt--dsc evntItmDsc"><%= event.desc %></div>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script defer type="text/javascript" src="../static/components/calendar/underscore.js"></script>
+<script defer type="text/javascript" src="../static/components/calendar/moment.js"></script>
+<script defer type="text/javascript" src="../static/components/calendar/clndr.js"></script>
+<script defer type="text/javascript" src="../static/application/js/app.js"></script>
+</body>
+</html>

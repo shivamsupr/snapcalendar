@@ -1,0 +1,32 @@
+$white: #ffffff !default;
+$ghost: #fafafa !default;
+$snow: #f9f9f9 !default;
+$vapor: #f6f6f6 !default;
+$white-smoke: #f5f5f5 !default;
+$silver: #efefef !default;
+$smoke: #eeeeee !default;
+$gainsboro: #dddddd !default;
+$iron: #cccccc !default;
+$base: #aaaaaa !default;
+$aluminum: #999999 !default;
+$jumbo: #888888 !default;
+$monsoon: #777777 !default;
+$steel: #666666 !default;
+$charcoal: #555555 !default;
+$tuatara: #444444 !default;
+$oil: #333333 !default;
+$jet: #222222 !default;
+$black: #000000 !default;
+$red: #CD0000 !default;
+$transparent: transparent !default;
+
+$dark-red: #FF5D4D;
+$dark-orange: #FFBA00;
+$dark-green: #5BA829;
+$dark-yellow: #EFA512;
+
+$action-color: #1485CC;
+$action-compliment-color: #CFFF19;
+$brand-color: #ff5f19 !default;
+$brand-color-light: lighten($brand-color, 10%);
+$brand-color-dark: darken($brand-color, 8%);

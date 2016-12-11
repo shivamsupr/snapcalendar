@@ -1,0 +1,27 @@
+$desktop-view-port-width: 1002px;
+$lap-start: 993px !default;
+
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$small-only: "only screen and (max-width: #{$lap-start - 1})";
+$medium-up: "only screen and (min-width: #{$lap-start})";
+
+$app-text-size: 13px;
+$app-text-xs-size: 10px;
+$app-text-s-size: 12px;
+$app-text-m-size: 14px;
+$app-text-l-size: 16px;
+$app-text-xl-size: 20px;
+$app-text-xxl-size: 22px;
+
+$app-text-lheight: 20px;
+$app-text-s-lheight: 18px;
+$app-text-m-lheight: 21px;
+$app-text-l-lheight: 24px;
+$app-text-xl-lheight: 30px;
+
+$app-text-reduction: 0px; // 13
+$app-text-s-reduction: 0px; // 12
+$app-text-m-reduction: 0px; // 14
+$app-text-l-reduction: 1px; // 15
+$app-text-xl-reduction: 2px; // 18
