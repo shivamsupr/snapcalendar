@@ -83,6 +83,7 @@ body {
         top: 0;
         padding: 10px 15px;
         border: 1px solid $iron;
+        border-bottom-width: 2px;
         cursor: pointer;
       }
 
@@ -130,7 +131,7 @@ body {
         border-bottom: 1px solid $white;
 
         &--d {
-          width: 20px;
+          width: 19.8px;
           height: 37px;
           text-align: center;
           line-height: 37px;
@@ -142,7 +143,7 @@ body {
 
         &--d {
           cursor: pointer;
-          width: 16px;
+          width: 15.8px;
           height: 26px;
           text-align: center;
           line-height: 24px;
